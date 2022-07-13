@@ -28,6 +28,7 @@ export async function updateProductHandler(
   res: Response
 ) {
   const userId = res.locals.user._id;
+
   const productId = req.params.productId;
   const update = req.body;
 

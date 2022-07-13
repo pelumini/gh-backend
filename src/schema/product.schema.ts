@@ -1,40 +1,17 @@
-import { object, number, string, TypeOf } from "zod";
-
-/**
- * @openapi
- * components:
- *   schema:
- *     Product:
- *       type: object
- *       required:
- *        - title
- *        - description
- *        - price
- *        - image
- *       properties:
- *         title:
- *           type: string
- *         description:
- *           type: string
- *         price:
- *           type: number
- *         image:
- *           type: string
- */
-
+import { object, number, string, TypeOf } from 'zod';
 const payload = {
   body: object({
     title: string({
-      required_error: "Title is required",
+      required_error: 'Title is required',
     }),
     description: string({
-      required_error: "Description is required",
-    }).min(120, "Description should be at least 120 characters long"),
+      required_error: 'Description is required',
+    }).min(120, 'Description should be at least 120 characters long'),
     price: number({
-      required_error: "Price is required",
+      required_error: 'Price is required',
     }),
     image: string({
-      required_error: "Image is required",
+      required_error: 'Image is required',
     }),
   }),
 };
@@ -42,7 +19,7 @@ const payload = {
 const params = {
   params: object({
     productId: string({
-      required_error: "productId is required",
+      required_error: 'productId is required',
     }),
   }),
 };
