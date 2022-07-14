@@ -9,7 +9,7 @@ import logger from './utils/logger';
 import routes from './routes';
 import deserializeUser from './middleware/deserializeUser';
 
-const port = config.get<number>('port');
+const port = process.env.PORT || config.get<number>('port');
 const app = express();
 
 app.use(
