@@ -1,6 +1,10 @@
 export default {
   port: 1337,
-  origin: ['http://localhost:3000', 'https://portfolio-pelu.vercel.app'],
+  origin: [
+    'http://localhost:3000',
+    'https://portfolio-pelu.vercel.app',
+    'https://portfolio-test-a7iyd0e22-pelumini.vercel.app',
+  ],
   dbUri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.mfnqe.azure.mongodb.net/backend`,
   saltWorkFactor: 10,
   accessTokenTtl: '15m',
