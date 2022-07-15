@@ -12,14 +12,12 @@ import deserializeUser from './middleware/deserializeUser';
 const port = process.env.PORT || config.get<number>('port');
 const app = express();
 
-// app.use(
-//   cors({
-//     origin: config.get('origin'),
-//     credentials: true,
-//   })
-// );
-
-app.use(cors());
+app.use(
+  cors({
+    origin: config.get('origin'),
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 app.use(express.json());
